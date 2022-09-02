@@ -1,0 +1,409 @@
+body{
+  margin: 0;
+}
+header{
+  background-color: #707B7C;
+  color: white;
+  display: flex;
+  height: 60px;
+  position: fixed;/*создаем липкий header*/
+  top: 0;/*Тут тоже*/
+  width: 100%;/*Тут тоже*/
+  z-index: 2;
+}
+header h1{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 2%;
+}
+.alex{
+  background-color: #1C2833;
+  color: #707B7C;
+  margin-left: 0.8%;
+  width: 100px;
+
+}
+.desktop{
+  margin-left: auto;
+  background-image: url('img/desktope.png')  ;
+  background-position: 50% 50%;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  width: 60px;
+}
+.tablet{
+  background-image: url('img/tablet.png');
+  background-position: 50% 50%;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  width: 60px;
+}
+.smartphone{
+  background-image: url('img/smartphone.png');
+  width: 60px;
+  background-position: 50% 50%;
+  background-size: 65%;
+  background-repeat: no-repeat;
+}
+.shop{
+  background-color: #DCE7E0 ;
+  background-image: url('img/shop.png');
+  width: 60px;
+  background-position: 50% 50%;
+  background-size: 65%;
+  background-repeat: no-repeat;
+}
+.delete{
+
+  background-image: url('img/delete.png');
+  width: 60px;
+  background-position: 50% 50%;
+  background-size: 65%;
+  background-repeat: no-repeat;
+}
+header button{
+    background-color: #707B7C;
+    border: 1px solid grey;
+}
+.menu{
+  padding-top: 2%;
+  margin-top: 3.9%;
+  width: 20%;
+
+  margin-left: 10.5%;
+  background-color: #DCE7E0;
+  text-align: center;
+  margin-bottom: auto;
+  position: fixed;
+  width
+
+}
+.menu img{
+  border-radius: 50%;
+  width: 60%;
+}
+.menu h2{
+  font-family: Marker Felt, fantasy;
+}
+
+
+.menu li{
+   list-style-type: none;/* Убираем точки */
+   margin-bottom: 5%
+
+}
+.menu ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+
+   }
+main{
+
+  display: grid;
+   grid-template-columns: 30% 30% 30% 10% ;
+}
+.content{
+  grid-column: 2 /4 ;
+  padding-top: 10%;
+  margin-left: 5%;
+}
+
+.menu a:active,
+.menu a:hover,
+.menu a {
+  text-decoration: none;
+  color: #506A73;
+}
+.menu a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.menu a:hover {
+    background-size: 100% 2px;
+}
+.img_lamp{
+  background-image: url('img/lamp.jpg');
+    width: 500px;
+    height: 685px;
+    /* you need to match the shadow color to your background or image border for the desired effect*/
+    box-shadow: 0 0 8px 8px white inset;
+}
+.home{
+  display: flex;
+}
+.home h1{
+  font-size: 400%;
+}
+/*animation*/
+.element-appearing {
+
+
+  /* Скроем элемент в начальном состоянии */
+  opacity: 0;
+}
+.element-appearing.element-show {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.element-appearing.element-show {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  z-index: 1;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.me h4{
+  color: grey;
+}
+.me .strengths{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 5%;
+}
+.me p:last-of-type{
+  margin-bottom: 5%;
+}
+.strengths div{
+  background-color: white;
+  box-shadow: 0 0 20px 1px #E7E4D8;
+  width: 20%;
+  height: 100px;
+
+
+}
+.strengths div p{
+  padding-top: 35%;
+  padding-bottom: 10%;
+  padding-left: 10%;
+
+}
+.strengths div:first-child{
+  border-bottom: 2px blue solid;
+
+  width:15%;
+  background-image: url(img/lamp.png);
+  background-position: 10% 10%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+
+}
+.strengths div:nth-child(2){
+  border-bottom: 2px red solid;
+
+  width:15%;
+  background-image: url(img/globe.png);
+  background-position: 10% 10%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+.strengths div:nth-child(3){
+  border-bottom: 2px #F4B900 solid;
+
+  width:15%;
+  background-image: url(img/database.png);
+  background-position: 10% 10%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+.strengths div:last-child{
+  border-bottom: 2px purple solid;
+
+  width:15%;
+  background-image: url(img/smartphone.png);
+  background-position: 10% 10%;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+.hire{
+  background-color: #FCD84B ;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+}
+.hire p{
+   font-size: 2rem;
+
+   padding-left: 4%;
+}
+.hire button{
+   background-color: #FCD84B ;
+   border: 1px black solid;
+   margin-left: 4%;
+   font-size: 1rem;
+   font-family: Andale Mono, monospace;
+}
+.services h4{
+  color: grey;
+
+}
+.services h3{
+
+  margin-bottom: 10%;
+}
+
+.expertise{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 280px);
+
+  gap: 30px;
+  text-align: center;
+}
+.expertise h5{
+  font-size: 1.2em;
+}
+.expertise > *,
+.expertise > *:after,
+.expertise > *:before{
+  box-shadow: 0 0 20px 2px #E7E4D8;
+  padding-bottom: 10%;
+}
+#one{
+  border-bottom: 2px blue solid;
+}
+#two{
+  border-bottom: 2px red solid;
+}
+#three{
+  border-bottom: 2px yellow solid;
+}
+#four{
+  border-bottom: 2px purple solid;
+}
+#five{
+  border-bottom: 2px aqua solid;
+}
+#six{
+  border-bottom: 2px darkblue solid;
+}
+#one img, #two img, #three img, #four img, #five img, #six img{
+   object-position: 0 -30px;
+}
+/*
+.menu_links a {
+  padding: 6px 0 8px;
+  color: #ffffff;
+}
+
+.menu_links a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+}
+
+.menu_links a:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+*/
